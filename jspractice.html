@@ -4,39 +4,65 @@
         <meta charset="utf-8">
         <title></title>
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300|Montserrat" rel="stylesheet">
 
     </head>
     <body>
 
-        <!-- <h1>Hey Ya'll</h1>
-        <button type="button" id="btn">Click</button> -->
-        <!-- <button type="button" id="clear">Reset</button> -->
-
+        <!-- TO DO APP SECTION -->
         <div class="main" >
             <h1 id="header">List</h1>
             <h2>Buy groceries</h2>
-            <button type="button" id="hotBtn">Change</button>
-            <ul>
+            <button type="button" id="hotBtn">Change to Kool</button>
+            <ul class="list">
                 <li id="one" class="hot">Fresh</li>
                 <li id="two" class="hot">Pine Nuts</li>
                 <li id="three" class="hot">Honey</li>
                 <li id="four">Balsamic Vinegar</li>
             </ul>
-            <!-- <div id="">
-                <span id="name">friend</span>
-                !
-            </div>
-                <div id="note">
-                    "Take a look around..."
-                </div> -->
+
         </div>
-        <div id="midSectionId" class="mid-section"></div>
 
-        <div id="thirdSectionId" class="third-section"></div>
+        // USERNAME CHECK EXAMPLE
+        <div class="password">
+            <form method="post" action="http://www.example.com/register">
+                <label for="username">Create a username: </label>
+                <input type="text" id="username" />
+                <div id="feedback"></div>
 
-        <div id="footerId" class="footer"></div>
+                <label for="password">Create a password: </label>
+                <input type="password" id="password"/>
 
+                <input type="submit" value="Sign up!" />
+            </form>
+        </div>
+
+
+
+        <div id="midSectionId" class="mid-section">
+            <h2>This animation was done with vanilla javascript!</h2>
+        </div>
+
+        <div id="thirdSectionId" class="third-section">
+            <h2>This animation was done with vanilla javascript!</h2>
+        </div>
+
+        <div id="footerId" class="footer">
+            <h2>This animation was done with vanilla javascript!</h2>
+        </div>
+
+        <!-- <h1>Hey Ya'll</h1>
+        <button type="button" id="btn">Click</button> -->
+        <!-- <button type="button" id="clear">Reset</button> -->
+        <!-- <div id="">
+            <span id="name">friend</span>
+            !
+        </div>
+            <div id="note">
+                "Take a look around..."
+            </div> -->
 
     <script src="scripts.js"></script>
+    <script src="password.js"></script>
     </body>
 </html>

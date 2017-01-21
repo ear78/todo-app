@@ -5,12 +5,12 @@
         window.scrollTo(0,0);
     }
 
-    //PAGE LOAD FUNCTIONS PRACTICE
+    //PAGE LOAD FUNCTIONS PRACTICE//////////////////////////
     function pageLoadAnimation(){
         elBody.classList.add('page-load');
     }
 
-    //SCROLL ANIMATIONS FOR PAGE
+    //SCROLL ANIMATIONS FOR PAGE///////////////////////////
     function scrollAnimation(){
         console.log('scrolled');
         var elDiv = document.getElementById('footerId');
@@ -33,6 +33,7 @@
 
     }
 
+    // CHANGE TO KOOL CLASS//////////////////////////////////////
     function changeHot(){
         var elHot = document.querySelectorAll('li.hot');
         for(var i = 0; i < elHot.length; i++){
@@ -47,41 +48,39 @@
                 elList[i].classList.add('cool');
             }
         }
-
-
     }
 
-    //UPDATE AND CLEAR FUNCTIONS FOR DATA ON PAGE
-    // function update(){
-    //     var username = 'Molly';
-    //     var message = 'See our upcoming range';
-    //
-    //     var elName = document.getElementById('name');
-    //     elName.textContent = username;
-    //
-    //     var elNote = document.getElementById('note');
-    //     elNote.textContent = message;
-    //
-    // }
 
-    // var clearBtn = function(){
-    //     var resetName = 'Friend';
-    //     var resetMessage = 'How are you today?';
-    //
-    //     var elName = document.getElementById('name');
-    //     elName.textContent = resetName;
-    //
-    //     var elNote = document.getElementById('note');
-    //     elNote.textContent = resetMessage;
-    // }
 
-    // VARIABLES FOR UPDATE FUNCTIONS////////////////////
-    ////////////////////////////////////////////////////
-    // var btn = document.getElementById('btn');
-    // btn.onclick = update;
+    //PAGE ANIMATION VARIABLES
+    var elBody = document.getElementsByTagName('body')[0];
+    elBody.onload = pageLoadAnimation;
 
-    // var clear = document.getElementById('clear');
-    // clear.onclick = clearBtn;
+    var winScroll = window;
+    winScroll.onscroll = scrollAnimation;
+
+    // GET THE LIST
+    var list = document.getElementsByTagName('ul')[0];
+
+    // ADD NEW ITEM TO END OF LIST
+    var newItemLast = document.createElement('li');
+    var newTextLast = document.createTextNode('Cream');
+    newItemLast.appendChild(newTextLast);
+    list.appendChild(newItemLast);
+
+    // ADD NEW ITEM START OF LIST
+    var newItemFirst = document.createElement('li');
+    var newTextFirst = document.createTextNode('Apples');
+    newItemFirst.appendChild(newTextFirst);
+    list.insertBefore(newItemFirst, list.firstChild);
+
+    // ADD NUMBER OF ITEMS TO HEADING
+    var listItems = document.querySelectorAll('li');
+    var heading = document.querySelector('h2');
+    var headingText = heading.firstChild.nodeValue;
+    var totalItems = listItems.length;
+    var newHeading = headingText + '<span>' + totalItems + '<span>';
+    heading.innerHTML = newHeading;
 
     //GET CLASS NAME HOT
     var elHotBtn = document.getElementById('hotBtn');
@@ -90,10 +89,3 @@
     //GET CHANGE LAST CHILD
     elLast = document.getElementById('four');
     elLast.onclick = changeLast;
-
-    //PAGE ANIMATION VARIABLES
-    var elBody = document.getElementsByTagName('body')[0];
-    elBody.onload = pageLoadAnimation;
-
-    var winScroll = window;
-    winScroll.onscroll = scrollAnimation;
